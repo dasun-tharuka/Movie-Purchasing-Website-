@@ -1,0 +1,111 @@
+/* footer container style*/
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.829);
+    font-style: normal;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+/* align text inside these divs*/
+
+#copyright{
+    padding-top: 20px;
+}
+
+/* display inline at the center*/
+
+footer .footer-details{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-left, .footer-right{
+    margin: auto;
+    height: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#socialdesc, #socials{
+    padding-bottom: 10px;
+}
+
+.logodesc, #socialdesc{
+    font-size: 20px;
+}
+
+#socialdesc{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logodesc{
+    padding-top: 4px;
+    padding-left: 3px;
+    padding-right: 4px;
+    color: #d30505;
+    border-top: 2px solid rgb(150, 1, 1);
+    border-left: 2px solid rgb(150, 1, 1);
+    border-right: 2px solid rgb(150, 1, 1);
+}
+
+#footerdesc{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+#socials{
+    width: 100%;
+    right: 100px;
+    display: inline;
+}
+
+.socials{
+    padding: 10px 5px;
+}
+
+#copyright{
+    width: 100%;
+    background-color: #868686ce;
+    justify-content: center;
+    padding-bottom: 10px;
+    color: rgb(33, 34, 34);
+    text-align: center;
+}
+
+.author{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-size: 14px;
+
+}
+/* change the color on hover*/
+.author:hover{
+    color: #8f1010;
+}
+/* changes icon color on hover*/
+#fb svg:hover{
+    fill: #4267B2;
+}
+
+#insta svg:hover{
+    fill: #d62976;
+}
+
+#twit svg:hover{
+    fill: #00acee;
+}
+
+#whats svg:hover{
+    fill: #00c448;
+}

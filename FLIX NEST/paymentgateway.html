@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment Gateway</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/paymentgateway.css">
+
+</head>
+<body>
+    <!--Payment Content-->
+    <div class="container">
+        <form action="">
+            <img src="Pics/Shop/close.png" alt="" class="close" onclick="inCloseClick()">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">order details</h3>
+                    <div class="inputBox">
+                        <div class="flex">
+                            <span>no of items :</span>
+                            <span id="no-of-items"></span>
+                        </div>
+                        <div class="flex">
+                            <span>total price :</span>
+                            <span id="total-price-to-pay"></span>
+                        </div>
+                    </div>
+                    <h3 class="title">contact details</h3>
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" placeholder="name" id="fname">
+                    </div>
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" placeholder="example@example.com" id="email">
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">payment</h3>
+                    <div class="inputBox">
+                        <span>cards accepted :</span>
+                        <img src="Pics/Shop/card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" placeholder="name" id="name">
+                    </div>
+                    <div class="inputBox">
+                        <span>credit card number :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444" id="card-no">
+                    </div>
+                    <div class="inputBox">
+                        <span>exp month :</span>
+                        <input type="number" placeholder="00" id="month">
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="number" placeholder="2023" id="year">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="123" id="cvv">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="button-hlod">
+                <input type="submit" value="proceed to checkout" id="submit-btton" class="submit-btn" onclick="onBought()">
+            </div>
+        </form>
+    </div> 
+    <script src="Scripts/shop.js"></script> 
+    <script src="Scripts/paymentgateway.js"></script>   
+</body>
+</html>

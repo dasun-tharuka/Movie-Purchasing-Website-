@@ -1,0 +1,91 @@
+/* Removing the previous settings on the body */
+html,body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 75%;
+    margin: 100px auto;
+    padding:10px 2.5%;
+    border: 5px solid rgb(185, 10, 10);
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
+}
+
+/* Blur the background image */
+&::before{
+    z-index: -1;
+    content: '';
+    filter: blur(2px);
+    background: url(../../Pics/background.jpg) no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+
+/*Add a line using bottom border*/
+#container #path{
+    margin-left: 10px;
+    padding-left: 10px;
+    width: 82%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(117, 7, 7);
+    height: 20px;
+    font-size: 16px;
+    color: rgba(36, 36, 36, 0.941);
+
+}
+
+h1{
+    padding-left: 40px;
+}
+
+/*Text align set to justify*/
+p{
+    padding: 0 10px;
+    margin: none;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#container div{
+    font-size: 20px;
+    height: 320px;
+    text-align: justify;
+    padding-right: 15%;
+    padding-left: 13%;
+
+}
+
+#container div img{
+    height: 300px;
+    width: 200px;
+    float: left;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: 3px solid rgb(164, 164, 164);
+    border-radius: 2px;
+}
+
+#container div h4{
+    padding-top: 15px;
+    font-size: 24px;
+}
+
+/*Up button style*/
+#goUp{
+    position: fixed;
+    right: 50px;
+    bottom: -60px;
+    width: 50px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    transition: all 0.6s ease;
+}

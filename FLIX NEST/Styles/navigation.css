@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap');
+
+
+/* navigation bar general properties */
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    text-shadow: 5px 5px 10px rgb(151, 2, 2);
+    transition: 0.2s;
+}
+
+/* logo image container (anchor)*/
+#logo-container{
+    position: absolute;
+    height: 80px;
+    left: 4%;
+    top: 0%;
+    align-items: start;
+}
+
+/* logo image */
+#logo{
+    margin-top: 15px;
+    padding: 0px;
+    width: 25%;
+}
+
+/* navigation link container */
+#nav-content{
+    width:  60%;
+    height: 80px;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* navigation links */
+.nav-links{
+    padding: 0 5px;
+    height: 60px;
+    display: flex;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    align-items: center;
+    text-align: center;
+    color: #ebe3e3;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+/* active class to set the current page */
+.nav-links.active{
+    color: #FFFFFF;
+}
+
+/* hover over effect */
+.nav-links:hover{
+    border-bottom: 2px solid #a00a0a;
+    transition:0.1s;
+    color: #a00a0a;
+    text-shadow: 2px 1px 1px #ffffff;
+}
+
+/* properties to be applied on scroll event */
+.navdark{
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid rgba(209, 73, 73, 0.7);
+    padding-bottom: 20px;
+    text-shadow: none!important;
+    transition: 0.2s;
+}
+

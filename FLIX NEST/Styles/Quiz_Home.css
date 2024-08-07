@@ -1,0 +1,119 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+
+/* Blur the background image */
+&::before{
+    z-index: -1;
+    content: '';
+    filter: blur(2px);
+    background: url(../Pics/background.jpg) no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Declaration of variables */
+:root {
+  --main_div-color: aliceblue;
+}
+
+.container_main {
+  display: flex;
+  margin-top: 70px;
+  height: 87.5vh;
+  background-color: var(--main_div-color);
+  animation: expand .8s ease forwards; /* Applying Animation */
+}
+
+.container1 {
+  margin-top: 50px;
+  width: 50%;
+  animation: slideUp .8s ease forwards .5s; /* Applying Animation */
+}
+
+.title {
+  overflow: hidden;
+  font-family: 'Kablammo', cursive;
+  font-size: 80px;
+  text-align: center;
+  animation: slideUp .8s ease forwards .5s; /* Applying Animation */
+}
+
+.par {
+  padding-left: 30px;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Lumanosimo', cursive;
+  font-style: italic;
+  font-size: 24px;
+  animation: slideUp .8s ease-in-out forwards .8s; /* Applying Animation */
+}
+
+.startQuizButton {
+  text-align: center;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  color: azure;
+  text-transform: uppercase;
+  height: 40px;
+  width: 125px;
+  border: none;
+  background-color: rgb(213, 23, 23);
+  border-radius: 50px;
+  cursor: pointer;
+  animation: slideUp .8s ease-in-out  forwards 1s; /* Applying Animation */
+}
+
+#button:hover {
+  background-color: rgb(255, 71, 71);
+}
+
+.container2 {
+  width: 50%;
+}
+
+.quiz_image {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.quiz_image_shape {
+  border-radius: 100px;
+  animation: slideIn 1.5s ease-in-out forwards; /* Applying Animation */
+}
+
+/* Creating Animations */
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+

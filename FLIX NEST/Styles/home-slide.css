@@ -1,0 +1,218 @@
+
+/* properties for all sections */
+section {
+  position: relative;
+  height: 80vh;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container1 {
+  color: #ffffff;
+}
+
+.additional{
+  background:rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+}
+
+.text-container3 {
+  color: #ffffff;
+}
+
+/* section--> container properties */
+section .container {
+  margin: 100px;
+}
+
+/* section--> h1 tag properties */
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+
+/* section--> h2 tag properties */
+section h2 {    
+  font-size: 40px;
+  text-align: center;
+  color: rgb(168, 133, 133);
+}
+
+section .fade-bottom h2{
+  color: beige;
+}
+
+section .text-container1, section .text-container3{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+.feedback, .about-us{
+  font-size: 19px;
+  color: #007bff;
+  transition: 0.2s;
+}
+
+/* these are given when hovering */
+.feedback:hover, .about-us:hover{
+  font-size: 22px;
+  color: #007bff;
+}
+
+section .text-container1 .text-box:hover, 
+section .text-container3 .text-box:hover{
+  background: rgba(17, 18, 19, 0.9);
+}
+
+
+section .text-container1,
+section .text-container2,
+section .text-container3 {
+  display: flex;
+}
+
+/* text box properties in 1st and 3rd section */
+section .text-container1 .text-box, 
+section .text-container3 .text-box{
+  margin: 20px;
+  padding: 20px;
+  background: rgba(17, 18, 19, 0.7);
+  border: 2px solid rgba(209, 73, 73, 0.7);
+  border-radius: 5px;
+  transition: all 0.3s;
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
+
+/* text box properties for section 2 */
+section .text-container2 .text-box{
+  overflow: hidden;
+  height: 200px;
+  width: 290px;
+  margin: 20px;
+  background: rgba(17, 18, 19, 0.7);
+  border: 2px solid rgba(209, 73, 73, 0.7);
+  border-radius: 5px;
+  transition: all 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* properties of the container that holds letters to appear */
+section .text-container2 .text-box .intro{
+  bottom: 0px;
+  top: 80px;
+  width: 290px;
+  height: 100px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+/* properties of the container that holds letters to appear */
+section .text-container2 .text-box .intro p{
+  font-size: small;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* text boxes that represent content page parts */
+.additional .text-container2 .text-box img {
+  height: 200px;
+  width: 290px;
+  transition: all 0.3s;
+}
+
+
+/* Hidden texts apper on hover */
+section .text-container2 .text-box:hover p{
+  opacity: 1;
+  visibility: visible;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+}
+
+section .text-container2 .text-box:hover img{
+  transform: scale(1.1) rotate(-2deg);
+  visibility: visible;
+  filter: opacity(30%);
+}
+
+/* section textbox h3 proerties */
+section .text-container1 .text-box h3,
+section .text-container2 .text-box h3,
+section .text-container3 .text-box h3 {
+  font-size: 30px;
+  color: rgba(194, 194, 194, 0.719);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Aplies the following properties when screen width is below 900px */
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container1, section .text-container2 ,section .text-container3  {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+/*  */
+.reveal.active {
+  opacity: 1;
+}
+
+/* animations for sectional parts */
+.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+/* executes the defined animations */
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

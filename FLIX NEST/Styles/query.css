@@ -1,0 +1,175 @@
+/* Resets properties to have a clear property establishment */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* created a pseudo element so that only the background image get the properties wihout affecting other things */
+&::before{
+    z-index: -1;
+    content: '';
+    filter: blur(2px);
+    background: url(../Pics/background.jpg) no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+h1{
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+
+form{
+    width: 100%;
+    display: flex;
+}
+
+/* star icon properties */
+.stars{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 30px;
+}
+
+.star{
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: all 0.2s ease;
+}
+
+.labels{
+    width: 100%;
+    height: 25px;
+    transition: 0.1s;
+    padding-top: 20px;
+}
+
+/* labels change color on hover */
+.labels:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.rating-stars{
+    margin-bottom: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.radio{
+    width: 18px;
+    height: 18px;
+}
+
+/* select tag properties */
+#select-feedback{
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    outline: none;
+    border: 2px solid rgba(209, 73, 73, 0.7);
+}
+
+textarea{
+    background-color:rgb(61, 57, 57);
+    outline:2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    color: #FFFFFF;
+    transition: 0.1s;
+}
+
+/* on clicking on the text area these properties will be applied */
+textarea:focus{
+    border-radius: 3px;
+    outline: 2px solid rgba(209, 73, 73, 0.7);
+}
+
+/* properties for text input tags */
+.text-type {
+    margin-bottom: 10px;
+    margin-top: 10px; 
+    padding-left: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    color: aliceblue;
+    transition: all 200ms ease-out;
+}
+
+/* on clicking on the text input tag these property will be applied */
+.text-type:focus{
+    border-bottom: 2px solid rgba(209, 73, 73, 0.7);
+}
+
+
+#tarea-feedback{
+    width: calc(100% - 20%) ;
+    height: 100px; 
+    margin-bottom: 10px;
+    margin-top: 10px; 
+    padding-left: 10px;
+    padding-top: 10px; 
+    font-size: 18px;
+}
+
+#name,#email{
+    height: 30px;
+    width: 40%;
+}
+
+#button-holder{
+    position: relative;
+}
+
+#send{
+    position: absolute;
+    right: 10px;
+}
+
+/* form button properties */
+.form-button{
+    margin-top: 80px;
+    background-color: rgba(61, 16, 16, 0.7);
+    outline: none;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px; 
+    cursor: pointer;
+    transition: 0.1s;
+    text-align: center;
+}
+
+/* form button properties on hover */
+.form-button:hover{
+    background-color: rgba(61, 16, 16, 1);
+    box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+}
+
+/* form properties in general */
+form .feedback-box{
+    margin: 150px 10%;
+    padding: 80px;
+    align-items: end;
+    width: 80%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.8 );
+    box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+    border-radius: 15px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+}

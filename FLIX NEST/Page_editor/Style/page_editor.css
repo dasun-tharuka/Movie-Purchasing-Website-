@@ -1,0 +1,100 @@
+/* Removing the previous settings on the body */
+html,body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Blur the background image */
+&::before{
+    z-index: -1;
+    content: '';
+    filter: blur(2px);
+    background: url(../../Pics/background.jpg) no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.main-div {
+    margin-top: 100px;
+    margin-left: 27%;
+    margin-right: 27%;
+    margin-bottom: 100px;
+    background-color: #fff;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    min-width: 400px;
+}
+
+.title {
+    background-color: rgb(146, 128, 100);
+    text-align: center;
+    color: white;
+}
+
+.stu-detail {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+.photo {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.photo img {
+    width: 200px;
+    height: 250px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.text {
+    padding: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+.content {
+    background-color: rgb(255, 243, 223);
+    border-radius: 30px;
+}
+
+.task {
+    padding-bottom: 10px;
+}
+
+.task h1 {
+    background-color: rgb(250, 201, 110);
+    padding-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.task h3 {
+padding-left: 5px;
+padding-right: 5px;
+text-align: justify;
+color: #4d4d4d;
+}
+
+.task button {
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(224, 209, 209);
+}

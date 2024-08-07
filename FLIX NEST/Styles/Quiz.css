@@ -1,0 +1,123 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Task 1 : To prevent the footer from coming up when the result popup box is displayed at the end of the quiz. */
+
+body{
+    display: flex; /* Task 1 - step 1 */
+    flex-direction: column; /* Task 1 - step 2 */
+    min-height: 100vh; /* Task 1 - step 3 */
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Blur the background image */
+&::before{
+    z-index: -1;
+    content: '';
+    filter: blur(2px);
+    background: url(../Pics/background.jpg) no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* Quiz box */
+.mainContainer {
+    margin: 100px auto 80px;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    opacity: 0.9;
+}
+
+/* Heading - Fun Quiz */
+.mainContainer h1 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.quiz {
+    padding: 0;
+}
+
+/* Question */
+.quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+/* Answer */
+.btn {
+    background-color: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Changing the background color and font color when hovering over the answer buttons. */
+.btn:hover:not([disabled]) {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Disabling the cursor when the user has given an answer. */
+.btn:disabled {
+    cursor: no-drop;
+}
+
+/* Next button */
+#next-btn {
+    background-color: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none; /* Not showing the next button until the user gives the answer. */
+}
+
+/* If the answer is correct */
+.correct {
+    background-color: #9aeabc;
+}
+
+/* If the answer is incorrect */
+.incorrect {
+    background-color: #ff9393;
+}
+
+/* Quiz timer */
+.timer {
+    text-align: right;
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Task 1 - step 4 */
+footer {
+    margin-top: auto;
+    height: auto;
+}
